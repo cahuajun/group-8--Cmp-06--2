@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "unisys"
+packages = [
+    { include = "common" },
+    { include = "cli" },
+    { include = "gui" }
+]
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jsonpickle = "^3.0.2"
+colorama = "^0.4.6"
+pytweening = "^1.0.7"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+[tool.poetry.scripts]
+cli = "cli.main:main"
+gui = "gui.main:main"
